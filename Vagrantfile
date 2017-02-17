@@ -1,19 +1,13 @@
-Vagrant.configure("2") do |config|
-	 config.vm.define "box1" do |box1|
+# -Top 5 processes as far as CPU usage is concerned
+echo -e "\e[31;43m***** TOP 5 MEMORY-CONSUMING PROCESSES *****\e[0m"
+ps -eo %cpu,comm --sort=-%cpu | head -n 6
+echo "
 
-         box1.vm.box="ubuntu/trusty64"
 
-         box1.vm.network :forwarded_port, guest: 22, host: 10122, id: "ssh"
 
- end
+#!/bin/bash
 
-  config.vm.define "box2" do |box2|
+read username
 
-         box2.vm.box="scotch/box"
+echo $username:'htc' | sudo chpasswd
 
-         box2.vm.network :forwarded_port, guest: 22, host: 10222, id: "ssh"
- end
-end
-
-#This is another edit! Mwahahaha!!!
-#This is Svetlana's change!
