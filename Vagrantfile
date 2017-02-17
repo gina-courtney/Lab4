@@ -11,3 +11,5 @@ read username
 
 echo $username:'htc' | sudo chpasswd
 
+Looks conspicuously familiar. I think I have seen this somewhere before
+except top 5 memory instead of cpu on first one
